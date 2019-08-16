@@ -6,20 +6,20 @@
     <title id="tab">AInime</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="imgs/main_page/favicon.jpg">
-    <link href="index.css" rel="stylesheet" type="text/css">
-    <link href="libraries/spin/spin.css" rel="stylesheet" type="text/css">
-    <link href="libraries/bootstrap4.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link type="text/css" rel="stylesheet" href="libraries/lightslider/css/lightslider.css" />
-    <link type="text/css" rel="stylesheet" href="libraries/MDB/css/mdb.min.css" />
-    <script src="libraries/jquery3.4.1/jquery-3.4.1.min.js"></script>
-    <script src="libraries//bootstrap4.1.3/js/bootstrap.min.js"></script>
-    <script type="module" src="spinner.js"></script>
-    <script src="libraries/lightslider/js/lightslider.js"></script>
-    <script src="libraries/MDB/js/mdb.min.js" defer></script>
-    <script type="module" src="libraries/spin/spin.js"></script>
-    <script url="Display/display.html" type="module"></script>
-    <script type="module" src='index.js'></script>
+    <link rel="icon" href="./imgs/main_page/favicon.jpg">
+    <link href="./index.css" rel="stylesheet" type="text/css">
+    <link href="./libraries/spin/spin.css" rel="stylesheet" type="text/css">
+    <link href="./libraries/bootstrap4.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="./libraries/lightslider/css/lightslider.css" />
+    <link type="text/css" rel="stylesheet" href="./libraries/MDB/css/mdb.min.css" />
+    <script src="./libraries/jquery3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="./libraries//bootstrap4.1.3/js/bootstrap.min.js"></script>
+    <script type="module" src="./spinner.js"></script>
+    <script src="./libraries/lightslider/js/lightslider.js"></script>
+    <script src="./libraries/MDB/js/mdb.min.js" defer></script>
+    <script type="module" src="./libraries/spin/spin.js"></script>
+    <script url="/Display/display.html" type="module"></script>
+    <script type="module" src='./index.js'></script>
 
 </head>
 
@@ -32,14 +32,14 @@
     <div class="wrapper">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <!--navbar navbar-expand-sm navbar-dark bg-dark-->
-            <a href="/"><img src="imgs/main_page/logo.jpg"></a>
+            <a href="/projects/ainime"><img src="./imgs/main_page/logo.jpg"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="basicExampleNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Home
+                        <a class="nav-link" href="/projects/ainime">Home
                   <span class="sr-only">(current)</span>
                   </a>
                     </li>
@@ -55,10 +55,12 @@
                 <h1 class="display-10" id="heading_1"><b>Anime Recommendations based on MAL Profile</b></h1>
                 <div class="text" id="text_1">
                     <h5> This webpage is designed to show the results of a machine learning recommendation webapp based on collaborative filtering.
-                      <a href="https://github.com/KKarrasKallidromitis/REST-API-for-Anime-Recommendation/blob/master/valid_usernames.txt" target="_blank">
-                      <u> Github repo </u> </a>
+                      <a href="https://github.com/KKarrasKallidromitis/REST-API-for-Anime-Recommendation" target="_blank">
+                      <u> API repo </u> </a>
+                       <a href="https://github.com/KKarrasKallidromitis/KKarrasKallidromitis.github.io/tree/master/projects/ainime" target="_blank">
+                      <u> Webpage code </u> </a>
                   </h5>
-                  <h5> The drop down option includes only a few example usernames from the total list of accepted ones.
+                    <h5> The drop down option includes only a few example usernames from the total list of accepted ones.
                   </br> <u>  <a href="https://github.com/KKarrasKallidromitis/REST-API-for-Anime-Recommendation/blob/master/valid_usernames.txt" target="_blank">
                     List of valid usernames</u>  </a> (6270 profiles supported)
                 </h5>
@@ -67,7 +69,7 @@
             <div class="int">
                 <div class="int-right">
                     <input class="textbox" id="text_username" placeholder="Enter MAL username" list="usernames">
-                      <datalist id="usernames">
+                    <datalist id="usernames">
                         <option value="tyrant_pet">
                         <option value="temo-kun">
                         <option value="NylonNeko">
@@ -81,15 +83,15 @@
                         <option value="KazeFalcon">
                         <option value="itsjustminh">
                         <option value="Rebelshadow">
-                      </datalist>
-                    <script type="module"> import {EnterToClick} from "/index.js";EnterToClick(); </script>
+                    </datalist>
+                    <script type="module"> import {EnterToClick} from "./index.js";EnterToClick(); </script>
                     <button id="btn_user" class="btn btn-dark">Submit</button>
-                    <script type="module"> import {getName} from "/index.js"; document.querySelector('#btn_user').addEventListener('click', getName)</script>
+                    <script type="module"> import {getName} from "./index.js"; document.querySelector('#btn_user').addEventListener('click', getName)</script>
                 </div>
                 <div class="int-left">
-                    <img src="/imgs/main_page/gin.jpg" height="120" width="90" id="img_ex" />
+                    <img src="./imgs/main_page/gin.jpg" height="120" width="90" id="img_ex" />
                     <button id="btn_example" class="btn btn-dark">Example</button>
-                    <script type="module"> import {getExample} from "/index.js"; document.querySelector('#btn_example').addEventListener('click', getExample)</script>
+                    <script type="module"> import {getExample} from "./index.js"; document.querySelector('#btn_example').addEventListener('click', getExample)</script>
                 </div>
                 <div id='spinner'></div>
                 <h5><div id="my-text-box" style="color:red"> </div></h5>
@@ -104,9 +106,9 @@
                         <div class="demo">
                             <ul id="lightSlider1">
                                 <li>
-                                <a href="https://myanimelist.net/anime/32281/Kimi_no_Na_wa?q=kimi" target="_blank" title="Kimi no Na wa.">
-                                    <img src="imgs/personal/5_a.jpg" height="335" width="225" />
-                                </a>
+                                    <a href="https://myanimelist.net/anime/32281/Kimi_no_Na_wa?q=kimi" target="_blank" title="Kimi no Na wa.">
+                                        <img src="imgs/personal/5_a.jpg" height="335" width="225" />
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso?q=your%20lie" target="_blank" title="Shigatsu wa Kimi no Uso">

@@ -1,5 +1,5 @@
-import {enable_spin} from '/spinner.js';
-import {disable_spin} from '/spinner.js';
+import {enable_spin} from './spinner.js';
+import {disable_spin} from './spinner.js';
 
 
 export async function getName(){

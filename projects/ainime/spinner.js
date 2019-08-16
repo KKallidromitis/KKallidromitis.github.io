@@ -1,4 +1,4 @@
-import {Spinner} from '/libraries/spin/spin.js';
+import {Spinner} from './libraries/spin/spin.js';
 
 var opts = {
   lines: 15, // The number of lines to draw
