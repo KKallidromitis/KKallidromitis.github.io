@@ -1,1 +1,388 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title id="tab">AniRec</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imgs/main_page/favicon.jpg">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="libraries/spin/spin.css" rel="stylesheet" type="text/css">
+    <link href="libraries/bootstrap4.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="libraries/lightslider/css/lightslider.css" />
+    <link type="text/css" rel="stylesheet" href="libraries/MDB/css/mdb.min.css" />
+    <script src="libraries/jquery3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="libraries//bootstrap4.1.3/js/bootstrap.min.js"></script>
+    <script type="module" src="spinner.js"></script>
+    <script src="libraries/lightslider/js/lightslider.js"></script>
+    <script src="libraries/MDB/js/mdb.min.js" defer></script>
+    <script type="module" src="libraries/spin/spin.js"></script>
+    <script url="Display/display.html" type="module"></script>
+    <script type="module" src='index.js'></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function() {
+            $("#lightSlider1").lightSlider();
+        });
+    </script>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <!--navbar navbar-expand-sm navbar-dark bg-dark-->
+            <a href="/"><img src="imgs/main_page/logo.jpg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                  </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://myanimelist.net/" target="_blank" class="nav-link">MAL website</a>
+                    </li>
+            </div>
+        </nav>
+        <hr>
+
+        <div id="display1">
+            <div class="init_description">
+                <h1 class="display-10" id="heading_1">Anime Recommendations based on MAL Profile</h1>
+                <div class="text" id="text_1">
+                    <p> This website is made to display the API results in a presentable format. In addition to the machine learning algorithm used for the recommendations, the website uses Jikan (an unofficial API for Myanimelist website) to access the user profile and present the profile statistics. PLease note that only a small portion of the dataset is used which omits a large portion of information.This information can greatly enchance the prediction quality and I am planning on adding the additional data in the near future.</p>
+                </div>
+            </div>
+            <div class="int">
+                <div class="int-right">
+                    <input class="textbox" id="text_username" placeholder="Enter MAL username" list="usernames">
+                      <datalist id="usernames">
+                        <option value="tyrant_pet">
+                        <option value="temo-kun">
+                        <option value="SrrL">
+                        <option value="PerlaNemesis">
+                        <option value="GeminiEye">
+                        <option value="Victor_Afonso">
+                        <option value="Rebelshadow">
+                      </datalist>
+                    <script type="module"> import {EnterToClick} from "/index.js";EnterToClick(); </script>
+                    <button id="btn_user" class="btn btn-dark">Submit</button>
+                    <script type="module"> import {getName} from "/index.js"; document.querySelector('#btn_user').addEventListener('click', getName)</script>
+                </div>
+                <div class="int-left">
+                    <img src="/imgs/main_page/gin.jpg" height="120" width="90" id="img_ex" />
+                    <button id="btn_example" class="btn btn-dark">Example</button>
+                    <script type="module"> import {getExample} from "/index.js"; document.querySelector('#btn_example').addEventListener('click', getExample)</script>
+                </div>
+                <div id='spinner'></div>
+                <div id="my-text-box" style="color:red"></div>
+            </div>
+
+            <div class="personal">
+                <div class="personal-header">
+                    <h3 class="display-8">My Favourite Shows</h3>
+                </div>
+                <div class="container-carousel">
+                    <div class="carousel-inner">
+                        <div class="demo">
+                            <ul id="lightSlider1">
+                                <li>
+                                <a href="https://myanimelist.net/anime/32281/Kimi_no_Na_wa?q=kimi" target="_blank" title="Kimi no Na wa.">
+                                    <img src="imgs/personal/5_a.jpg" height="335" width="225" />
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso?q=your%20lie" target="_blank" title="Shigatsu wa Kimi no Uso">
+                                        <img src="imgs/personal/7_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/31859/Hai_to_Gensou_no_Grimgar" target="_blank" title="Hai to Gensou no Grimgar">
+                                        <img src="imgs/personal/9_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/2251/Baccano" target="_blank" title="Baccano!">
+                                        <img src="imgs/personal/10_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <!--insert data-thumb="" for data thumbnail-->
+                                    <a href="https://myanimelist.net/anime/35839/Sora_yori_mo_Tooi_Basho?q=sora%20yori" target="_blank" title="Sora yori mo Tooi Basho">
+                                        <img src="imgs/personal/1_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/1/Cowboy_Bebop?q=cow" target="_blank" title="Cowboy Bepop">
+                                        <img src="imgs/personal/2_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch?q=code%20gea" target="_blank" title="Code Geass: Hangyaku no Lelouch">
+                                        <img src="imgs/personal/3_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/11887/Kokoro_Connect?q=kokoro" target="_blank" title="Kokoro Connect">
+                                        <img src="imgs/personal/6_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/13125/Shinsekai_yori?q=shinsek" target="_blank" title="Shinsekai yori">
+                                        <img src="imgs/personal/8_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood?q=full%20" target="_blank" title="Fullmetal Alchemist: Brotherhood">
+                                        <img src="imgs/personal/4_a.jpg" height="335" width="225" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="display2" style="display:none">
+            <div class="user_profile">
+                <div class="row">
+                    <div class="col-sm">
+                        <a href="" id="profile_url" target="_blank">
+                            <img id="profile_image" /> </a>
+                    </div>
+                    <div class="col-8">
+                        <h1 class="display-8" style="float:left">Profile: </h1>
+                        <h1 class="display-8" id="insert_username" position="relative" style="font-style: italic"><i>kitronas</i></h1>
+                        <h3>
+               Anime Statistics:
+               <h3>
+               <h6 style="float:left">
+               Days Watched: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_0">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               Mean Score: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_1">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               Total Entries: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_2">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               Episodes Watched: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_3">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               Completed: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_4">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               Watching:&nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_5">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               On hold: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_6">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               Dropped: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_7">
+               Error: Failed to Replace
+               <h6>
+               <h6 style="float:left">
+               Plan to watch: &nbsp
+               <h6>
+               <h6 position="relative" id="insert_stats_8">
+               Error: Failed to Replace
+               <h6>
+            </div>
+         </div>
+      </div>
+      <hr>
+      <div class"recs-gen">
+        <h2 class="display-8" style="float:left">User Favorite Shows:&nbsp</h2>
+        <div class="container-carousel">
+            <div class="carousel-inner">
+                <div class="demo">
+                    <ul id="lightSlider2">
+                      <li>
+                        <a id="rec_g_url_1"  target="_blank">
+                            <img id="rec_g_img_1"  height="335" width="225" />
+                        </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_2"  target="_blank">
+                                <img id="rec_g_img_2"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_3"  target="_blank">
+                                <img id="rec_g_img_3"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_4"  target="_blank">
+                                <img id="rec_g_img_4"  width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <!--insert data-thumb="" for data thumbnail-->
+                            <a id="rec_g_url_5"  target="_blank">
+                                <img id="rec_g_img_5"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_6"  target="_blank">
+                                <img id="rec_g_img_6" height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_7"  target="_blank">
+                                <img id="rec_g_img_7"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_8"  target="_blank">
+                                <img id="rec_g_img_8"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_9"  target="_blank">
+                                <img id="rec_g_img_9"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_10"  target="_blank">
+                                <img id="rec_g_img_10"  height="335" width="225" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="recs_a">
+        <h2 class="display-8">Recommendations </h2>
+         <div class="row">
+            <div class="col-3">
+               <a id="rec_a_url_1" target="_blank" >
+               <img id="rec_a_img_1"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_2"   target="_blank">
+               <img id="rec_a_img_2"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_3"   target="_blank">
+               <img id="rec_a_img_3"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_4"   target="_blank">
+               <img id="rec_a_img_4"  height="335" width="225"/> </a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-3">
+               <a id="rec_a_url_5"   target="_blank">
+               <img id="rec_a_img_5"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_6"   target="_blank">
+               <img id="rec_a_img_6"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_7"   target="_blank">
+               <img id="rec_a_img_7"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_8"   target="_blank">
+               <img id="rec_a_img_8"  height="335" width="225"/> </a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-3">
+               <a id="rec_a_url_9"  target="_blank">
+               <img id="rec_a_img_9"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_10"   target="_blank">
+               <img id="rec_a_img_10"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_11"   target="_blank">
+               <img id="rec_a_img_11"  height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_12"   target="_blank">
+               <img id="rec_a_img_12"  height="335" width="225"/> </a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-3">
+               <a id="rec_a_url_13"  target="_blank">
+               <img id="rec_a_img_13" height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_14"  target="_blank">
+               <img id="rec_a_img_14" height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_15"  target="_blank">
+               <img id="rec_a_img_15" height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_16"  target="_blank">
+               <img id="rec_a_img_16" height="335" width="225"/> </a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-3">
+               <a id="rec_a_url_17"  target="_blank">
+               <img id="rec_a_img_17" height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_18"  target="_blank">
+               <img id="rec_a_img_18" height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_19"  target="_blank">
+               <img id="rec_a_img_19" height="335" width="225"/> </a>
+            </div>
+            <div class="col-3">
+               <a id="rec_a_url_20" target="_blank">
+               <img id="rec_a_img_20" height="335" width="225"/> </a>
+            </div>
+         </div>
+    </div>
+    </div>
+      <hr>
+      <footer class="footer">
+         <p>© 2019 All rights reserved </p>
+      </footer>
+      </div>
+
+      <div class="back">
+      </div>
+   </body>
+</html>

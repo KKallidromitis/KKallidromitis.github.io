@@ -1,0 +1,97 @@
+
+.display-8{
+  font-family:"Courier New", Courier, monospace
+
+}
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+.footer {
+	max-width: 960px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: #D3D3D3;
+    color: #000000;
+}
+
+.row{
+	padding-bottom:22px;
+	max-width: 960px;
+	min-width: 960px;
+}
+
+
+.wrapper {
+		background: #0000;
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: 960px;
+		min-width: 960px;
+    padding-right: 0px;
+    padding-left:  0px;
+		border: 1px solid white;
+}
+
+.article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.footer {
+	max-width: 960px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: #D3D3D3;
+    color: #000000;
+}
+.my-text-box{
+color:red;
+font-weight:bold;
+}
+
+.textbox {
+  justify-content: center;
+}
+
+.back {
+	position: absolute;
+  right:0;
+	bottom:0;
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+}
+
+.int{
+	padding-top:10px;
+	padding-bottom:52px;
+}
+.int-right{
+	margin-right:37%;
+	display: inline;
+}
+.int-left{
+	display: inline;
+}
+
+.personal-header{
+	padding-bottom:10px;
+}
+
+.personal{
+	padding-bottom:5px;
+}
+
+.init_description{
+	padding-top:10px;
+}
+
+.display-10{
+	padding-bottom:10px
+}
