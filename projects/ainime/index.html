@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title id="tab">AniRec</title>
+    <title id="tab">AInime</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="imgs/main_page/favicon.jpg">
@@ -52,9 +52,16 @@
 
         <div id="display1">
             <div class="init_description">
-                <h1 class="display-10" id="heading_1">Anime Recommendations based on MAL Profile</h1>
+                <h1 class="display-10" id="heading_1"><b>Anime Recommendations based on MAL Profile</b></h1>
                 <div class="text" id="text_1">
-                    <p> This website is made to display the API results in a presentable format. In addition to the machine learning algorithm used for the recommendations, the website uses Jikan (an unofficial API for Myanimelist website) to access the user profile and present the profile statistics. Please note that only a small portion of the dataset is used which omits a large portion of information.This information can greatly enchance the prediction quality and I am planning on adding the additional data in the near future.</p>
+                    <h5> This webpage is designed to show the results of a machine learning recommendation webapp based on collaborative filtering.
+                      <a href="https://github.com/KKarrasKallidromitis/REST-API-for-Anime-Recommendation/blob/master/valid_usernames.txt" target="_blank">
+                      <u> Github repo </u> </a>
+                  </h5>
+                  <h5> The drop down option includes only a few example usernames from the total list of accepted ones.
+                  </br> <u>  <a href="https://github.com/KKarrasKallidromitis/REST-API-for-Anime-Recommendation/blob/master/valid_usernames.txt" target="_blank">
+                    List of valid usernames</u>  </a> (6270 profiles supported)
+                </h5>
                 </div>
             </div>
             <div class="int">
@@ -63,10 +70,16 @@
                       <datalist id="usernames">
                         <option value="tyrant_pet">
                         <option value="temo-kun">
-                        <option value="SrrL">
-                        <option value="PerlaNemesis">
-                        <option value="GeminiEye">
-                        <option value="Victor_Afonso">
+                        <option value="NylonNeko">
+                        <option value="Himura_Kamina">
+                        <option value="AndyZim">
+                        <option value="Nikyo">
+                        <option value="SnakeEaterXII">
+                        <option value="Daniel_Ellsworth">
+                        <option value="kurokoshi">
+                        <option value="carbafoss">
+                        <option value="KazeFalcon">
+                        <option value="itsjustminh">
                         <option value="Rebelshadow">
                       </datalist>
                     <script type="module"> import {EnterToClick} from "/index.js";EnterToClick(); </script>
@@ -79,7 +92,7 @@
                     <script type="module"> import {getExample} from "/index.js"; document.querySelector('#btn_example').addEventListener('click', getExample)</script>
                 </div>
                 <div id='spinner'></div>
-                <div id="my-text-box" style="color:red"></div>
+                <h5><div id="my-text-box" style="color:red"> </div></h5>
             </div>
 
             <div class="personal">
@@ -218,72 +231,8 @@
          </div>
       </div>
       <hr>
-      <div class"recs-gen">
-        <h2 class="display-8" style="float:left">User Favorite Shows:&nbsp</h2>
-        <div class="container-carousel">
-            <div class="carousel-inner">
-                <div class="demo">
-                    <ul id="lightSlider2">
-                      <li>
-                        <a id="rec_g_url_1"  target="_blank">
-                            <img id="rec_g_img_1"  height="335" width="225" />
-                        </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_2"  target="_blank">
-                                <img id="rec_g_img_2"  height="335" width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_3"  target="_blank">
-                                <img id="rec_g_img_3"  height="335" width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_4"  target="_blank">
-                                <img id="rec_g_img_4"  width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <!--insert data-thumb="" for data thumbnail-->
-                            <a id="rec_g_url_5"  target="_blank">
-                                <img id="rec_g_img_5"  height="335" width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_6"  target="_blank">
-                                <img id="rec_g_img_6" height="335" width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_7"  target="_blank">
-                                <img id="rec_g_img_7"  height="335" width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_8"  target="_blank">
-                                <img id="rec_g_img_8"  height="335" width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_9"  target="_blank">
-                                <img id="rec_g_img_9"  height="335" width="225" />
-                            </a>
-                        </li>
-                        <li>
-                            <a id="rec_g_url_10"  target="_blank">
-                                <img id="rec_g_img_10"  height="335" width="225" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <hr>
       <div class="recs_a">
-        <h2 class="display-8">Recommendations </h2>
+        <h2 class="display-8">Recommended Shows </h2>
          <div class="row">
             <div class="col-3">
                <a id="rec_a_url_1" target="_blank" >
@@ -375,6 +324,70 @@
             </div>
          </div>
     </div>
+      <hr>
+      <div class"recs-gen">
+        <h2 class="display-8" style="float:left">Favorite Shows watched&nbsp</h2>
+        <div class="container-carousel">
+            <div class="carousel-inner">
+                <div class="demo">
+                    <ul id="lightSlider2">
+                      <li>
+                        <a id="rec_g_url_1"  target="_blank">
+                            <img id="rec_g_img_1"  height="335" width="225" />
+                        </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_2"  target="_blank">
+                                <img id="rec_g_img_2"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_3"  target="_blank">
+                                <img id="rec_g_img_3"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_4"  target="_blank">
+                                <img id="rec_g_img_4"  width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <!--insert data-thumb="" for data thumbnail-->
+                            <a id="rec_g_url_5"  target="_blank">
+                                <img id="rec_g_img_5"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_6"  target="_blank">
+                                <img id="rec_g_img_6" height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_7"  target="_blank">
+                                <img id="rec_g_img_7"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_8"  target="_blank">
+                                <img id="rec_g_img_8"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_9"  target="_blank">
+                                <img id="rec_g_img_9"  height="335" width="225" />
+                            </a>
+                        </li>
+                        <li>
+                            <a id="rec_g_url_10"  target="_blank">
+                                <img id="rec_g_img_10"  height="335" width="225" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+
     </div>
       <hr>
       <footer class="footer">

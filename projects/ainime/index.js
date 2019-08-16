@@ -68,7 +68,7 @@ async function HttpGet(url){
 function response_text(val){
 		if(val==1){document.getElementById('my-text-box').innerHTML = "Error 404: Username not found in database";}
     else if (val==0){document.getElementById('my-text-box').innerHTML = "Error 4004: Please enter a username";}
-		else if (val==2){ document.getElementById('my-text-box').innerHTML = "Error **:An unknown error occurred";}
+		else if (val==2){ document.getElementById('my-text-box').innerHTML = "Error 500: A CORS issue occurred. Please try again";}
 		disable_spin()
 };
 
