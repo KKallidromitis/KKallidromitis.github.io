@@ -6,6 +6,6 @@ https://kkarraskallidromitis.github.io.
 
 To view the rest API created as a Flask web app:
 
-https://anirec.appspot.com/<insert username> (Deployed on GCP) example:FrostCat
+https://anirec.appspot.com/<insert_username> (Deployed on GCP) example:FrostCat
 
 https://github.com/KKarrasKallidromitis/REST-API-for-Anime-Recommendation
