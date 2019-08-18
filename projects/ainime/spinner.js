@@ -22,12 +22,12 @@ var opts = {
 };
 
 export function enable_spin(){
-  document.getElementById("tab").innerHTML="AniRec - Loading..."
+  document.getElementById("tab").innerHTML="AInime - Loading..."
   var target = document.getElementById('spinner');
   var spinner = new Spinner(opts).spin(target);
 }
 
 export function disable_spin(){
-  document.getElementById("tab").innerHTML="AniRec"
+  document.getElementById("tab").innerHTML="AInime"
   $(".spinner").remove();
 }
