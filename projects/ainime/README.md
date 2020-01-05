@@ -1,4 +1,4 @@
-# KKarrasKallidromitis.github.io
+# KKallidromitis.github.io
 
 This repo is created to display the results from my Machine Learning recommender API in my github page: 
 
